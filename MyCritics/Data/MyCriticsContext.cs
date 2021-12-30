@@ -15,5 +15,17 @@ namespace MyCritics.Data
         }
 
         public DbSet<MyCritics.Models.Usuario> Usuario { get; set; }
+
+        public DbSet<MyCritics.Models.Filme> Filme { get; set; }
+
+        public DbSet<MyCritics.Models.Ator> Ator { get; set; }
+
+        public DbSet<MyCritics.Models.Sonoplastia> Sonoplastia { get; set; }
+
+        public DbSet<MyCritics.Models.Diretor> Diretor { get; set; }
+
+        public DbSet<MyCritics.Models.Roteiro> Roteiro { get; set; }
+
+        public DbSet<MyCritics.Models.Figurino> Figurino { get; set; }
     }
 }
