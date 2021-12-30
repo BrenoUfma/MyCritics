@@ -17,7 +17,7 @@
 
 <body>
     <section class="login">
-        <img class="login__imagem" src="~/images/abacate.png" alt="Mascote Abacate">
+        
         <div class="login__entrada">
             <div class="login__entrada__titulo"><h2>Login</h2></div>
 
@@ -30,8 +30,10 @@
                     <label class="login__label" for="nome">Senha:</label>
                     <input class="login__input" type="password" name="password" id="password" placeholder="Digite sua senha" required />
                 </div>
-                <button class="login__botao" type="submit" class="btn btn-primary btn-block btn-large">Entrar</button>
+                <button class="login__botao btn btn-primary btn-block btn-large" type="submit">Entrar</button>
+                <a class="btn btn-block btn-large btn-default"  asp-action="Create" asp-controller="Usuarios">Resgistrar</a>
             </form>
+            <img class="login__imagem pull-left" src="~/images/abacate.png" width="300" height="300" alt="Mascote Abacate">
 
         </div>
     </section>
