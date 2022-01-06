@@ -1,17 +1,30 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MyCritics.Data;
 using MyCritics.Models;
-using MyCritics.Uteis;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace MyCritics.Controllers {
     public class HomeController : Controller {
+        private readonly MyCriticsContext _context;
+        public HomeController(MyCriticsContext context) {
+            _context = context;
+        }
+
         public IActionResult Login() {
             return View();
         }
+        [HttpPost]
+        public IActionResult Login(Usuario usuario) {
+            var Login = _context.Usuario.FindAsync(usuario.Email);
+            if (Login.Result.Password == usuario.Password) {
+                return Privacy();
+            }
+            else {
+                return View();
+            }
+                
+        }
+
 
         public IActionResult Index() {
            // DAL objDal = new DAL();

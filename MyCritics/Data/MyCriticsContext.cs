@@ -9,6 +9,9 @@ namespace MyCritics.Data
 {
     public class MyCriticsContext : DbContext
     {
+        public MyCriticsContext() {
+        }
+
         public MyCriticsContext (DbContextOptions<MyCriticsContext> options)
             : base(options)
         {

@@ -1,6 +1,4 @@
-﻿@{
-    ViewData["Title"] = "Login";
-}
+﻿@model Usuario
 <!DOCTYPE html>
 <header class="cabecalho">
     <h1 class="cabecalho__titulo">MY CRITICS</h1>
@@ -18,14 +16,14 @@
         <div class="login__entrada">
             <div class="login__entrada__titulo"><h2>Login</h2></div>
 
-            <form method="post" class="login__entrada__acesso">
+            <form asp-controller="Home" asp-action="Login" method="post" class="login__entrada__acesso">
                 <div class="login__usuario">
                     <label class="login__label" for="nome">Usuário:</label>
-                    <input class="login__input" type="text" name="nome" id="nome" placeholder="Digite seu usuário" required />
+                    <input class="login__input form-control" type="text" asp-for="Email" placeholder="Digite seu usuário" required />
                 </div>
                 <div class="login__senha">
                     <label class="login__label" for="nome">Senha:</label>
-                    <input class="login__input" type="password" name="password" id="password" placeholder="Digite sua senha" required />
+                    <input class="login__input form-control" type="password" asp-for="Password" placeholder="Digite sua senha" required />
                 </div>
                 <button class="login__botao btn-block btn-large" type="submit">Entrar</button>
                 </form>

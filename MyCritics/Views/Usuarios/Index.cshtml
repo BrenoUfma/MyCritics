@@ -12,25 +12,25 @@
 <table class="table">
     <thead>
         <tr>
-            <th>
+            <th class="control-label">
                 @Html.DisplayNameFor(model => model.Password)
             </th>
-            <th>
+            <th class="control-label">
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Sobrenome)
             </th>
-            <th>
+            <th class="control-label">
                 @Html.DisplayNameFor(model => model.Email)
             </th>
-            <th>
+            <th class="control-label">
                 @Html.DisplayNameFor(model => model.Cidade)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Estado)
             </th>
-            <th>
+            <th class="control-label">
                 @Html.DisplayNameFor(model => model.DataNascimento)
             </th>
             <th></th>
@@ -39,25 +39,25 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
+            <td class="control-label"> 
                 @Html.DisplayFor(modelItem => item.Password)
             </td>
-            <td>
+            <td class="control-label">
                 @Html.DisplayFor(modelItem => item.Nome)
             </td>
-            <td>
+            <td class="control-label">
                 @Html.DisplayFor(modelItem => item.Sobrenome)
             </td>
-            <td>
+            <td class="control-label"> 
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
-            <td>
+            <td class="control-label">
                 @Html.DisplayFor(modelItem => item.Cidade)
             </td>
-            <td>
+            <td class="control-label">
                 @Html.DisplayFor(modelItem => item.Estado)
             </td>
-            <td>
+            <td class="control-label">
                 @Html.DisplayFor(modelItem => item.DataNascimento)
             </td>
             <td>

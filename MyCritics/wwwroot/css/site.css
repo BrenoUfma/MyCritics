@@ -510,3 +510,123 @@ table {
     border-spacing: 0;
 }
 
+.barra {
+    background-color: #B1C053;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: relative;
+    height: 127px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px 25px;
+}
+
+.logoNome {
+    padding: 1em;
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Poppins';
+    text-align: center;
+}
+
+A {
+    color: #000000;
+    text-decoration: none;
+    align-items: center;
+}
+
+.Pesquisa {
+    background-color: white;
+    border-radius: 22px;
+}
+
+p {
+    font-family: 'sans-serif';
+    font-size: 30px;
+    font-weight: 'semibold';
+    text-align: center;
+}
+
+.Perfil {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px 25px;
+}
+
+.Principal {
+    display: grid;
+    align-items: center;
+}
+
+.Noticias {
+    display: grid;
+    align-items: center;
+}
+
+.Conteudo {
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    height: 500px;
+    background-color: #ffffff;
+}
+
+.conteudo-left {
+    width: 650px;
+    height: 500px;
+    float: left;
+    background-color: #B1C053;
+    border-radius: 22px;
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+}
+
+.mais-avaliados {
+    justify-content: center;
+    width: 650px;
+    height: 500px;
+    float: right;
+    background-color: #B1C053;
+    border-radius: 22px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+
+.titulo_conteudo_right {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+/*.Lista{
+
+            background-color: yellowgreen;
+            display: grid;
+            grid-template-rows: repeat(2,1fr);
+            grid-template-columns: repeat(2,1fr);
+            grid-column-gap: 10px;
+            grid-row-gap: 1em;
+            padding:10px
+        }*/
+.avaliacoes {
+    background-color: yellowgreen;
+    grid-template-rows: repeat(2,1fr);
+    grid-row-gap: 1em;
+    border-radius: 22px;
+}
+
+.dot {
+    height: 158px;
+    width: 158px;
+    background-color: #bbb;
+    border-radius: 50%;
+    justify-self: center;
+}
+
+.control-label{
+    color:black;
+}

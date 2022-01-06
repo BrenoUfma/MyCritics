@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyCritics.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -26,6 +27,11 @@ namespace MyCritics.Models {
             Cidade = cidade;
             Estado = estado;
             DataNascimento = dataNascimento;
+        }
+
+        public bool ValidarLogin() {
+            
+            return true;
         }
     }
 }
