@@ -22,13 +22,26 @@ namespace MyCritics.Controllers {
                 return RedirectToAction("Inicial");
             }
             else {
+                
                 return View();
             }
               
         }
 
-
         public IActionResult Index() {
+            return View();
+        }
+        public IActionResult Pesquisa() {
+            return View();
+        }
+        public IActionResult Avaliacao() {
+            return View();
+        }
+        public IActionResult Perfil() {
+            return View();
+        }
+
+        public IActionResult Indicacoes() {
             return View();
         }
 
