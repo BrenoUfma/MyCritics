@@ -18,14 +18,26 @@
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
 </head>
-<body style="color:white">
-    <nav class="cabecalho">
-        <div class="container">
-            <div class="cabecalho__navegacao-botoes">
-                
-            </div>
+<body>
+    <div class="barra">
+        <div class="logoNome">
+            <a href="/">
+                <img src="~/images/abacate-removebg-preview.png" alt="some text" width=33 height=34>
+            </a>
+            <a asp-controller="home" asp-action="Inicial">
+                <p class="Titulo"> MY CRITICS </p>
+            </a>
         </div>
-    </nav>
+        <a asp-controller="home" asp-action="Inicial">
+            <p class="p"> Início </p>
+        </a>
+        <a href="/">
+            <p class="p"> Minha Lista </p>
+        </a>
+        <input type="text" placeholder="Pesquisa"></input>
+
+      
+    </div>
 
 
     <partial name="_CookieConsentPartial" />

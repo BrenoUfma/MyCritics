@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyCritics.Models {
     public class Usuario {
+
         public int ID { get; set; }
         public string Password { get; set; }
         public string Nome { get; set; }
@@ -29,9 +30,6 @@ namespace MyCritics.Models {
             DataNascimento = dataNascimento;
         }
 
-        public bool ValidarLogin() {
-            
-            return true;
-        }
+        
     }
 }

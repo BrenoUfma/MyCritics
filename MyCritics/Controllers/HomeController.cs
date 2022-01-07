@@ -2,6 +2,7 @@
 using MyCritics.Data;
 using MyCritics.Models;
 using System.Diagnostics;
+using System.Linq;
 
 namespace MyCritics.Controllers {
     public class HomeController : Controller {
@@ -15,23 +16,23 @@ namespace MyCritics.Controllers {
         }
         [HttpPost]
         public IActionResult Login(Usuario usuario) {
-            var Login = _context.Usuario.FindAsync(usuario.Email);
-            if (Login.Result.Password == usuario.Password) {
-                return Privacy();
+
+            var login = _context.Usuario.Where(a => a.Email.Equals(usuario.Email)).FirstOrDefault();
+            if (login.Password == usuario.Password) {
+                return RedirectToAction("Inicial");
             }
             else {
                 return View();
             }
-                
+              
         }
 
 
         public IActionResult Index() {
-           // DAL objDal = new DAL();
             return View();
         }
 
-        public IActionResult Privacy() {
+        public IActionResult Inicial() {
             return View();
         }
 
