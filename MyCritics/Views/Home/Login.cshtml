@@ -1,14 +1,13 @@
 ﻿@model Usuario
 <!DOCTYPE html>
-<header class="cabecalho">
+<div class="cabecalho" id="cab__login__registrar">
     <h1 class="cabecalho__titulo">MY CRITICS</h1>
     <nav class="cabecalho__navegacao">
         <ul class="cabecalho__navegacao-botoes">
             <a class="cabecalho__botao-nav" asp-action="Create" asp-controller="Usuarios">Resgistrar</a>
         </ul>
-
     </nav>
-</header>
+</div>
 <body>
 
     <section class="login">
@@ -26,7 +25,7 @@
                     <input class="login__input form-control" type="password" asp-for="Password" placeholder="Digite sua senha" required />
                 </div>
                 <button class="login__botao btn-block btn-large" type="submit">Entrar</button>
-                </form>
+            </form>
             
 
         </div>

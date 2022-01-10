@@ -1,5 +1,6 @@
-﻿.cabecalho {
-    background: #b1db7a;
+﻿/*cabecalho login e registrar*/
+.cabecalho {
+    background: #B1C053;
     display: flex;
     justify-content: space-between;
     padding: 1rem 2rem 1rem 2rem;
@@ -8,10 +9,13 @@
 }
 
 .cabecalho__titulo {
-    text-decoration: none;
+    padding: 1em;
+    display: flex;
+    align-items: center;
     color: #0a3d0d;
     font-size: 30px;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .cabecalho__botao-nav {
@@ -24,11 +28,13 @@
     transition: 0.5s;
 }
 
-    .cabecalho__botao-nav:hover {
-        background-color: #0a3d0d;
-        color: #ffffff;
-        cursor: pointer;
-    }
+.cabecalho__botao-nav:hover {
+    background-color: #0a3d0d;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/*body login*/
 
 .login {
     display: flex;
@@ -45,7 +51,7 @@
 .login__entrada {
     align-items: center;
     justify-content: center;
-    background: #b1db7a;
+    background: #B1C053;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
@@ -938,4 +944,43 @@ p {
 }
 .titulo {
     margin: 50px;
+}
+
+
+
+
+/* CCS bdo formulário defs cadastro*/
+.formulario__titulo {
+    align-items: center;
+    color: #0a3d0d;
+    display: flex;
+    font-size: 40px;
+    font-weight: bold;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.formulario__corpo {
+    align-items: center;
+    color: #0a3d0d;
+    display: flex;
+    justify-content: center;
+}
+
+.control-label{
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.botao {
+    text-decoration: none;
+    border-radius: 1rem;
+    color: #0a3d0d;
+    font-size: 25px;
+    font-weight: bold;
+    transition: 0.5s;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
 }
