@@ -20,4 +20,4 @@ No My Critics é possível fazer avaliações de categorias técnicas reservadas
 Entre outros.
 Tudo isso decidido na palma da sua mão.
 
-# “My Critics, onde a sua opinião vale alguma coisa!!"
+# “My Critics, onde a sua opinião vale alguma coisa!"
