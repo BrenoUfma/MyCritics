@@ -4,11 +4,19 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
+<header class="cabecalho">
+    <img src="~/images/abacate-removebg-preview.png" alt="some text" width=50 height=51>
+    <h1 class="cabecalho__titulo">ADM - INDEX</h1>
+    <nav class="cabecalho__navegacao">
+        <ul class="cabecalho__navegacao-botoes">
+            <a class="cabecalho__botao-nav" asp-action="Login" asp-controller="Home">MY CRITICS</a>
+        </ul>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+    </nav>
+</header>
+
+
+
 <table class="table">
     <thead>
         <tr>
@@ -18,7 +26,7 @@
             <th class="control-label">
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
-            <th>
+            <th class="control-label">
                 @Html.DisplayNameFor(model => model.Sobrenome)
             </th>
             <th class="control-label">
@@ -27,7 +35,7 @@
             <th class="control-label">
                 @Html.DisplayNameFor(model => model.Cidade)
             </th>
-            <th>
+            <th class="control-label">
                 @Html.DisplayNameFor(model => model.Estado)
             </th>
             <th class="control-label">
@@ -69,3 +77,7 @@
 }
     </tbody>
 </table>
+
+<p>
+    <a class="cabecalho__botao-nav" asp-action="Create">Criar Novos Usuários</a>
+</p>
