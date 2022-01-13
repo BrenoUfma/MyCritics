@@ -10,15 +10,20 @@ namespace MyCritics.Controllers {
         public HomeController(MyCriticsContext context) {
             _context = context;
         }
-
+        bool Sessao = false;
         public IActionResult Login() {
+            if (Sessao == false) {
+                
+            }
             return View();
         }
+
         [HttpPost]
         public IActionResult Login(Usuario usuario) {
-
+            
             var login = _context.Usuario.Where(a => a.Email.Equals(usuario.Email)).FirstOrDefault();
             if (login.Password == usuario.Password) {
+                Sessao = true;
                 return RedirectToAction("Inicial");
             }
             else {
@@ -27,7 +32,7 @@ namespace MyCritics.Controllers {
             }
               
         }
-
+        
         public IActionResult Index() {
             return View();
         }

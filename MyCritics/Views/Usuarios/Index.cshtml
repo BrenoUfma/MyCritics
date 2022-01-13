@@ -12,26 +12,29 @@
 <table class="table">
     <thead>
         <tr>
-            <th class="control-label">
+            <th>
                 @Html.DisplayNameFor(model => model.Password)
             </th>
-            <th class="control-label">
+            <th>
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Sobrenome)
             </th>
-            <th class="control-label">
+            <th>
                 @Html.DisplayNameFor(model => model.Email)
             </th>
-            <th class="control-label">
+            <th>
                 @Html.DisplayNameFor(model => model.Cidade)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Estado)
             </th>
-            <th class="control-label">
+            <th>
                 @Html.DisplayNameFor(model => model.DataNascimento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.file)
             </th>
             <th></th>
         </tr>
@@ -39,26 +42,29 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td class="control-label"> 
+            <td>
                 @Html.DisplayFor(modelItem => item.Password)
             </td>
-            <td class="control-label">
+            <td>
                 @Html.DisplayFor(modelItem => item.Nome)
             </td>
-            <td class="control-label">
+            <td>
                 @Html.DisplayFor(modelItem => item.Sobrenome)
             </td>
-            <td class="control-label"> 
+            <td>
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
-            <td class="control-label">
+            <td>
                 @Html.DisplayFor(modelItem => item.Cidade)
             </td>
-            <td class="control-label">
+            <td>
                 @Html.DisplayFor(modelItem => item.Estado)
             </td>
-            <td class="control-label">
+            <td>
                 @Html.DisplayFor(modelItem => item.DataNascimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.file)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
