@@ -8,7 +8,7 @@
     <h1 class="cabecalho__titulo">ADMINISTRADOR</h1>
     <nav class="cabecalho__navegacao">
         <ul class="cabecalho__navegacao-botoes">
-            <a class="cabecalho__botao-nav" asp-action="Login" asp-controller="Home">MY CRITICS</a>
+            <a class="cabecalho__botao-nav" asp-action="Index" asp-controller="Usuarios">Retornar a lista</a>
         </ul>
 
     </nav>
@@ -64,7 +64,6 @@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="ID" />
-        <input type="submit" value="Delete" class="btn btn-default" /> |
-        <a asp-action="Index">Back to List</a>
+        <input type="submit" value="Delete" class="btn btn-default" /> 
     </form>
 </div>

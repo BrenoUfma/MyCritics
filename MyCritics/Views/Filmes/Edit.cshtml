@@ -1,14 +1,21 @@
 ﻿@model MyCritics.Models.Filme
 
-@{
-    ViewData["Title"] = "Edit";
-}
+@{ ViewData["Title"] = "Edit"; }
 
-<h2>Edit</h2>
+<header class="cabecalho">
+    <img src="~/images/abacate-removebg-preview.png" alt="some text" width=50 height=51>
+    <h1 class="cabecalho__titulo">ADMINISTRADOR</h1>
+    <nav class="cabecalho__navegacao">
+        <ul class="cabecalho__navegacao-botoes">
+            <a class="cabecalho__botao-nav" asp-action="Index" asp-controller="Filmes">Retornar a lista</a>
+        </ul>
 
-<h4>Filme</h4>
+    </nav>
+</header>
+
+<h4 class="formulario__titulo">Filmes - Edição</h4>
 <hr />
-<div class="row">
+<div class="row formulario__corpo">
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -34,8 +41,3 @@
         </form>
     </div>
 </div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
