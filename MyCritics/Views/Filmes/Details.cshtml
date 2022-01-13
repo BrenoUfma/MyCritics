@@ -4,10 +4,19 @@
     ViewData["Title"] = "Details";
 }
 
-<h2>Details</h2>
+<header class="cabecalho">
+    <img src="~/images/abacate-removebg-preview.png" alt="some text" width=50 height=51>
+    <h1 class="cabecalho__titulo">ADMINISTRADOR</h1>
+    <nav class="cabecalho__navegacao">
+        <ul class="cabecalho__navegacao-botoes">
+            <a class="cabecalho__botao-nav" asp-action="Index" asp-controller="Filmes">Retornar a lista</a>
+        </ul>
+
+    </nav>
+</header>
 
 <div>
-    <h4>Filme</h4>
+    <h4 class="formulario__titulo">Filmes - Detalhes</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>

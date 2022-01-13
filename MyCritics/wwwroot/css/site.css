@@ -33,9 +33,10 @@
     color: #ffffff;
     cursor: pointer;
 }
-
+.bteste{
+    justify-content: center;
+}
 /*body login*/
-
 .login {
     display: flex;
     justify-content: space-evenly;
@@ -514,6 +515,7 @@ blockquote, q {
 table {
     border-collapse: collapse;
     border-spacing: 0;
+
 }
 
 .barra {
@@ -521,6 +523,7 @@ table {
     top: 0;
     left: 0;
     right: 0;
+    bottom: 2rem;
     position: relative;
     height: 127px;
     display: grid;

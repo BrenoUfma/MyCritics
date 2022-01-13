@@ -1,10 +1,11 @@
 ﻿using MyCritics.Data;
 using System;
+using System.ComponentModel;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
+using System.Web;
 
 namespace MyCritics.Models {
     public class Usuario {
@@ -17,9 +18,7 @@ namespace MyCritics.Models {
         public string Cidade { get; set; }
         public string Estado { get; set; }
         public DateTime DataNascimento { get; set; }
-        [DataType(DataType.Upload)]
-        [Display(Name = "Upload Foto")]
-        public Array file { get; set; }
+        
 
         public Usuario() {
         }
@@ -33,7 +32,6 @@ namespace MyCritics.Models {
             Cidade = cidade;
             Estado = estado;
             DataNascimento = dataNascimento.Date;
-            this.file = file.ToArray();
             
         }
 

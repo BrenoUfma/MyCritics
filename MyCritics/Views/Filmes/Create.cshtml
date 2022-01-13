@@ -3,12 +3,19 @@
 @{
     ViewData["Title"] = "Create";
 }
+<header class="cabecalho">
+    <h1 class="cabecalho__titulo">MY CRITICS</h1>
+    <nav class="cabecalho__navegacao">
+        <ul class="cabecalho__navegacao-botoes">
+            <a class="cabecalho__botao-nav" asp-action="Index" asp-controller="Filmes">Retornar a lista</a>
+        </ul>
 
-<h2>Create</h2>
+    </nav>
+</header>
+<h2 class="formulario__titulo">Adicionar Filmes</h2>
 
-<h4>Filme</h4>
 <hr />
-<div class="row">
+<div class="row formulario__corpo">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -33,8 +40,3 @@
         </form>
     </div>
 </div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-

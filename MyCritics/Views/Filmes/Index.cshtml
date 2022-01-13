@@ -4,10 +4,19 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
+<header class="cabecalho">
+    <img src="~/images/abacate-removebg-preview.png" alt="some text" width=50 height=51>
+    <h1 class="cabecalho__titulo">ADM - INDEX</h1>
+    <nav class="cabecalho__navegacao">
+        <ul class="cabecalho__navegacao-botoes">
+            <a class="cabecalho__botao-nav" asp-action="Login" asp-controller="Home">MY CRITICS</a>
+        </ul>
+
+    </nav>
+</header>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="cabecalho__botao-nav" asp-action="Create">Adicionar novos Filmes</a>
 </p>
 <table class="table">
     <thead>
