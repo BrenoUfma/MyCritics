@@ -30,5 +30,7 @@ namespace MyCritics.Data
         public DbSet<MyCritics.Models.Roteiro> Roteiro { get; set; }
 
         public DbSet<MyCritics.Models.Figurino> Figurino { get; set; }
+
+
     }
 }

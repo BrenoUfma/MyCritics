@@ -1,4 +1,5 @@
-﻿<body>
+﻿@model MyCritics.Models.Usuario
+<body>
     <div class="barra">
         <div class="logoNome">
             <a href="">
@@ -18,11 +19,12 @@
 
         <div class="Perfil">
             <p></p>
-            <a asp-controller="home" asp-action="Perfil">
-                <img src="~/images/mulher-perfil.jpg" alt="some text" width=51 height=52 class="Pesquisa">
-                <p class="Titulo"> Clara </p>
-            </a>
-
+            
+                <a asp-controller="home" asp-action="Perfil">
+                    <img src="~/images/mulher-perfil.jpg" alt="some text" width=51 height=52 class="Pesquisa">
+                    <p class="Titulo"> @Model.Nome </p>
+                </a>
+            
             <p></p>
         </div>
 

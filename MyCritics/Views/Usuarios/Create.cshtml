@@ -56,18 +56,16 @@
                 <span asp-validation-for="DataNascimento" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="file" class="control-label"></label>
-                <input asp-for="file" type="file" />
+                <label asp-for="file" class="control-label">Foto Usuario</label>
+                <img id="fotoUsuario" />
+                <input asp-for="file" type="file" id="upload"/>
                 <span asp-validation-for="file" class="text-danger"></span>
             </div>
             <div class="form-group botao">
-                <input type="submit" value="Cadastrar" class="btn btn-default botao_btn" />
+                <a asp-controller="Home" asp-action="Login" class="btn btn-danger">Cancelar</a>
+                <input type="submit" value="Cadastrar" class="btn btn-success botao_btn" />
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 

@@ -28,10 +28,12 @@ namespace MyCritics {
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
+            
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-    services.AddDbContext<MyCriticsContext>(options =>
+            
+
+            services.AddDbContext<MyCriticsContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("MyCriticsContext")));
         }
 

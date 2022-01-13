@@ -18,7 +18,8 @@ namespace MyCritics.Models {
         public string Cidade { get; set; }
         public string Estado { get; set; }
         public DateTime DataNascimento { get; set; }
-        
+        public string file { get; set; }
+
 
         public Usuario() {
         }
@@ -32,14 +33,10 @@ namespace MyCritics.Models {
             Cidade = cidade;
             Estado = estado;
             DataNascimento = dataNascimento.Date;
+            this.file = file;
             
         }
-
-        public bool ValidarLogin() {
-
-            return true;
-        }
-
+        
         
         }
     }

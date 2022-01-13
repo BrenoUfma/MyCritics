@@ -1,4 +1,5 @@
-﻿<body>
+﻿@model MyCritics.Models.Usuario
+<body>
     <div class="barra">
         <div class="logoNome">
             <a href="">
@@ -20,7 +21,7 @@
             <p></p>
             <a asp-controller="home" asp-action="Perfil">
                 <img src="~/images/mulher-perfil.jpg" alt="some text" width=51 height=52 class="Pesquisa">
-                <p class="Titulo"> Clara </p>
+                <p class="Titulo"> @ViewBag.Nome </p>
             </a>
 
             <p></p>
@@ -36,7 +37,7 @@
                 <div class="dot">
                     <img src="~/images/mulher-perfil.jpg" alt="some text" width=158 height=158 class="foto">
                 </div>
-                <p>Clara</p>
+                <p>@ViewBag.Nome @ViewBag.Sobrenome </p>
             </div>
             <div class="perfil-nome">
                 <p>Assistidos Recentemente</p>
