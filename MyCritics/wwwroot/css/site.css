@@ -2,7 +2,7 @@
 .cabecalho {
     background: #B1C053;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 1rem 2rem 1rem 2rem;
     align-items: center;
     margin-bottom: 3rem;
@@ -26,6 +26,14 @@
     font-size: 25px;
     font-weight: bold;
     transition: 0.5s;
+}
+.tag__perfil {
+    border-radius: 1rem;
+    padding: 0 2rem 0 2rem;
+    text-decoration: none;
+    color: #0a3d0d;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .cabecalho__botao-nav:hover {
@@ -518,6 +526,15 @@ table {
 
 }
 
+.cabecalho__critics {
+    width:2000px;
+}
+
+.cabecalho__todos__imagem{
+    position:absolute;
+
+}
+
 .barra {
     background-color: #B1C053;
     top: 0;
@@ -528,7 +545,7 @@ table {
     height: 127px;
     display: grid;
     align-items: center;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px 25px;
 }
 
@@ -564,7 +581,7 @@ p {
 .Perfil {
     display: grid;
     align-items: center;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px 25px;
 }
 

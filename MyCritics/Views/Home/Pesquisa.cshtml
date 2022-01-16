@@ -1,31 +1,16 @@
 ﻿<body>
-    <div class="barra">
+    <div class="cabecalho" id="cab_login_registrar">
         <div class="logoNome">
             <a href="">
-                <img src="~/images/abacate-removebg-preview.png" alt="some text" width=33 height=34>
+                <img src="~/images/abacate-removebg-preview.png" alt="some text" width=50 height=51>
             </a>
-            <a asp-controller="home" asp-action="Inicial">
-                <p class="Titulo"> MY CRITICS </p>
-            </a>
+            <a class="cabecalho__botao-nav" asp-action="Inicial" asp-controller="Home">MY CRITICS</a>
         </div>
-        <a asp-controller="home" asp-action="Inicial">
-            <p class="p"> Início </p>
+        <a class="cabecalho__botao-nav" asp-controller="Home" asp-action="Indicacoes">Lista de Filmes</a>
+        <a class="tag__perfil" asp-controller="home" asp-action="Perfil">
+            <img src="~/images/mulher-perfil.jpg" alt="some text" width=51 height=52 class="Pesquisa">
+            <p class="Titulo"> @Model.Nome </p>
         </a>
-        <a asp-controller="home" asp-action="Indicacoes">
-            <p class="p"> Minha Lista </p>
-        </a>
-        <input type="text" placeholder="Pesquisa"></input>
-
-        <div class="Perfil">
-            <p></p>
-            <a asp-controller="home" asp-action="Perfil">
-                <img src="~/images/mulher-perfil.jpg" alt="some text" width=51 height=52 class="Pesquisa">
-                <p class="Titulo"> Clara </p>
-            </a>
-
-            <p></p>
-        </div>
-
     </div>
     <div class="Principal">
         <div class="filmes-pesquisados">

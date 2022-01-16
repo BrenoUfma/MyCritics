@@ -1,6 +1,12 @@
 ﻿@model MyCritics.Models.Usuario
 <header class="cabecalho">
-    <h1 class="cabecalho__titulo">MY CRITICS</h1>
+    <div class="logoNome">
+        <a href="">
+            <img src="~/images/abacate-removebg-preview.png" alt="some text" width=50 height=51>
+        </a>
+
+        <a class="cabecalho__botao-nav" asp-action="Login" asp-controller="Home">MY CRITICS</a>
+    </div>
     <nav class="cabecalho__navegacao">
         <ul class="cabecalho__navegacao-botoes">
             <a class="cabecalho__botao-nav" asp-action="Login" asp-controller="Home">Login</a>

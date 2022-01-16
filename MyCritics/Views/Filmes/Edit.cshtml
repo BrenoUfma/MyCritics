@@ -3,7 +3,13 @@
 @{ ViewData["Title"] = "Edit"; }
 
 <header class="cabecalho">
-    <img src="~/images/abacate-removebg-preview.png" alt="some text" width=50 height=51>
+    <div class="logoNome">
+        <a href="">
+            <img src="~/images/abacate-removebg-preview.png" alt="some text" width=50 height=51>
+        </a>
+
+        <a class="cabecalho__botao-nav" asp-action="Login" asp-controller="Home">MY CRITICS</a>
+    </div>
     <h1 class="cabecalho__titulo">ADMINISTRADOR</h1>
     <nav class="cabecalho__navegacao">
         <ul class="cabecalho__navegacao-botoes">
