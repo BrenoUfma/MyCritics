@@ -14,7 +14,7 @@
             <p></p>
             <a asp-controller="home" asp-action="Perfil">
                 <img src="~/images/mulher-perfil.jpg" alt="some text" width=51 height=52 class="Pesquisa">
-                <p class="Titulo"> @ViewBag.Nome </p>
+                <p class="Titulo"> @TempData.Peek("Nome") </p>
             </a>
 
             <p></p>
@@ -29,7 +29,7 @@
                 <div class="dot">
                     <img src="~/images/mulher-perfil.jpg" alt="some text" width=158 height=158 class="foto">
                 </div>
-                <p>@ViewBag.Nome @ViewBag.Sobrenome </p>
+                <p>@TempData.Peek("Nome") @TempData.Peek("Sobrenome") </p>
             </div>
             <div class="perfil-nome">
                 <p>Assistidos Recentemente</p>

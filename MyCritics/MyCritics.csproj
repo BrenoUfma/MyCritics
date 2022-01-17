@@ -12,6 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20220117121202_Avaliacoes.cs" />
+    <Compile Remove="Migrations\20220117121202_Avaliacoes.Designer.cs" />
     <Compile Remove="Models\Class.cs" />
   </ItemGroup>
 

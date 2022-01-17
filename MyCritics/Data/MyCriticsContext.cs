@@ -31,6 +31,8 @@ namespace MyCritics.Data
 
         public DbSet<MyCritics.Models.Figurino> Figurino { get; set; }
 
+        public DbSet<MyCritics.Models.Avaliacao> Avaliacao { get; set; }
+
 
     }
 }

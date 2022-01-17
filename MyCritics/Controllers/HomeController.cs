@@ -1,12 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using MyCritics.Data;
 using MyCritics.Models;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace MyCritics.Controllers {
     public class HomeController : Controller {
-        
+
         private readonly MyCriticsContext _context;
 
         public HomeController(MyCriticsContext context) {
@@ -14,8 +16,11 @@ namespace MyCritics.Controllers {
         }
 
         public Usuario Sessao(Usuario usuario) {
+
             var login = _context.Usuario.Where(a => a.Email.Equals(usuario.Email)).FirstOrDefault();
+
             return login;
+
         }
 
 
@@ -26,14 +31,16 @@ namespace MyCritics.Controllers {
 
         [HttpPost]
         public IActionResult Login(Usuario usuario) {
-            
+
 
             if (Sessao(usuario).Password == usuario.Password) {
-                
+                TempData["Nome"] = Sessao(usuario).Nome;
+                TempData["Sobrenome"] = Sessao(usuario).Sobrenome;
+                TempData["ID"] = Sessao(usuario).ID;
                 return View("Inicial", Sessao(usuario));
             }
             else {
-                
+
                 return View();
             }
 
@@ -49,19 +56,19 @@ namespace MyCritics.Controllers {
             return View();
         }
         public IActionResult Perfil() {
-            
+
             return View();
         }
 
-        public IActionResult Indicacoes() {
-            return View();
+        public async Task<IActionResult> Indicacoes() {
+            return View(await _context.Filme.ToListAsync());
         }
-        
+
         public IActionResult Inicial() {
             return View();
         }
 
-        
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error() {

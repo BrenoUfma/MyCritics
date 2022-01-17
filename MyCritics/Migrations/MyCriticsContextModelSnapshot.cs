@@ -38,6 +38,35 @@ namespace MyCritics.Migrations
                     b.ToTable("Ator");
                 });
 
+            modelBuilder.Entity("MyCritics.Models.Avaliacao", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("FilmeID");
+
+                    b.Property<int>("NotaAtor");
+
+                    b.Property<int>("NotaDiretor");
+
+                    b.Property<int>("NotaFigurino");
+
+                    b.Property<int>("NotaRoteiro");
+
+                    b.Property<int>("NotaSonoplastia");
+
+                    b.Property<int>("UsuarioID");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("FilmeID");
+
+                    b.HasIndex("UsuarioID");
+
+                    b.ToTable("Avaliacao");
+                });
+
             modelBuilder.Entity("MyCritics.Models.Diretor", b =>
                 {
                     b.Property<int>("ID")
@@ -153,6 +182,19 @@ namespace MyCritics.Migrations
                     b.HasOne("MyCritics.Models.Filme", "Filme")
                         .WithMany()
                         .HasForeignKey("FilmeID");
+                });
+
+            modelBuilder.Entity("MyCritics.Models.Avaliacao", b =>
+                {
+                    b.HasOne("MyCritics.Models.Filme", "Filme")
+                        .WithMany()
+                        .HasForeignKey("FilmeID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("MyCritics.Models.Usuario", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("UsuarioID")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("MyCritics.Models.Figurino", b =>
