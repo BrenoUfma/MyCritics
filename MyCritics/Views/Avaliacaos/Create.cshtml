@@ -6,36 +6,40 @@
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group" hidden="hidden" >
+            <div class="form-group" hidden="hidden">
                 <input asp-for="UsuarioID" class="form-control" value="@TempData.Peek("ID")"></input>
             </div>
             <div class="form-group" hidden="hidden">
-                <input asp-for="FilmeID" class="form-control" value="@ViewBag.ID" ></input>
+                <input asp-for="FilmeID" class="form-control" value="@ViewBag.ID"></input>
             </div>
             <div class="form-group">
-                <label asp-for="NotaAtor" class="control-label"></label>
-                <input asp-for="NotaAtor" class="form-control" />
-                <span asp-validation-for="NotaAtor" class="text-danger"></span>
+                <label asp-for="NotaFilme" class="control-label">Nota Filme</label>
+                <input asp-for="NotaFilme" class="form-control" />
+                <span asp-validation-for="NotaFilme" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="NotaDiretor" class="control-label"></label>
+                <label asp-for="NotaDiretor" class="control-label">Nota Diretor</label>
                 <input asp-for="NotaDiretor" class="form-control" />
                 <span asp-validation-for="NotaDiretor" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="NotaFigurino" class="control-label"></label>
+                <label asp-for="NotaFigurino" class="control-label">Nota Figurino</label>
                 <input asp-for="NotaFigurino" class="form-control" />
                 <span asp-validation-for="NotaFigurino" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="NotaRoteiro" class="control-label"></label>
+                <label asp-for="NotaRoteiro" class="control-label">Nota Roteiro</label>
                 <input asp-for="NotaRoteiro" class="form-control" />
                 <span asp-validation-for="NotaRoteiro" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="NotaSonoplastia" class="control-label"></label>
+                <label asp-for="NotaSonoplastia" class="control-label">Nota Sonoplastia</label>
                 <input asp-for="NotaSonoplastia" class="form-control" />
                 <span asp-validation-for="NotaSonoplastia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comentario" class="control-label">Comentario</label>
+                <textarea asp-for="Comentario" class="form-control"></textarea>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-default" />

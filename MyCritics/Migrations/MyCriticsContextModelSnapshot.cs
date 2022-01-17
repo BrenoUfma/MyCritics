@@ -44,13 +44,15 @@ namespace MyCritics.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("FilmeID");
+                    b.Property<string>("Comentario");
 
-                    b.Property<int>("NotaAtor");
+                    b.Property<int>("FilmeID");
 
                     b.Property<int>("NotaDiretor");
 
                     b.Property<int>("NotaFigurino");
+
+                    b.Property<int>("NotaFilme");
 
                     b.Property<int>("NotaRoteiro");
 
