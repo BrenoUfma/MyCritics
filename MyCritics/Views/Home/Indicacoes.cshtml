@@ -11,7 +11,7 @@
         <a class="cabecalho__botao-nav" asp-controller="home" asp-action="Indicacoes">
             <p class="p"> Lista de Filmes </p>
         </a>
-        <div class="Perfil">
+        <div class="">
             <p></p>
             <a asp-controller="home" asp-action="Perfil">
                 <img src="~/images/mulher-perfil.jpg" alt="some text" width=51 height=52 class="Pesquisa">
@@ -22,13 +22,14 @@
         </div>
     </div>
     <div class="Principal">
-        <p>FILMES CADASTRADOS</p>
-        <hr />
-        <div class="Lista">
+        <p class="formulario__titulo">FILMES CADASTRADOS</p>
+        
+        <div class="">
+            <hr />
             <table class="table">
                 <thead>
-                    <tr>
-                        <th>
+                    <tr class="indicacoes__tr">
+                        <th class="indicacoes__td">
                             @Html.DisplayNameFor(model => model.Nome)
                         </th>
                         <th>
@@ -38,17 +39,18 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var item in Model) {
+                    @foreach (var item in Model)
+                    {
                         <tr>
-                            <td>
+                            <td class="indicacoes__td">
                                 @Html.DisplayFor(modelItem => item.Nome)
                             </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.Descricao)
                             </td>
-                            <td>
-                                <a asp-controller="Avaliacaos" asp-action="Create" asp-route-id="@item.ID">Avaliar</a> |
-                        
+                            <td class="indicacoes__td__btn">
+                                <a asp-controller="Avaliacaos" asp-action="Create" asp-route-id="@item.ID">Avaliar</a>
+
                             </td>
                         </tr>
                     }

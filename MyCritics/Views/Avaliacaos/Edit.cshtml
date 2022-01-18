@@ -3,12 +3,25 @@
 @{
     ViewData["Title"] = "Edit";
 }
+<header class="cabecalho">
+    <div class="logoNome">
+        <a href="">
+            <img src="~/images/abacate-removebg-preview.png" alt="some text" width=50 height=51>
+        </a>
 
-<h2>Edit</h2>
+        <a class="cabecalho__botao-nav" asp-action="Login" asp-controller="Home">MY CRITICS</a>
+    </div>
+    <h1 class="cabecalho__titulo">ADMINISTRADOR</h1>
+    <nav class="cabecalho__navegacao">
+        <ul class="cabecalho__navegacao-botoes">
+            <a class="cabecalho__botao-nav" asp-action="Index" asp-controller="Avaliacaos">Retornar a lista</a>
+        </ul>
 
-<h4>Avaliacao</h4>
+    </nav>
+</header>
+<h4 class="formulario__titulo">Avaliação - Edição</h4>
 <hr />
-<div class="row">
+<div class="row formulario__corpo">
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>

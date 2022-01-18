@@ -2,7 +2,7 @@
 .cabecalho {
     background: #B1C053;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 1rem 2rem 1rem 2rem;
     align-items: center;
     margin-bottom: 3rem;
@@ -112,22 +112,20 @@
     transition: 0.5s;
 }
 
-    .login__botao:hover {
-        background-color: #0a3d0d;
-        color: #ffffff;
-        cursor: pointer;
-    }
+.login__botao:hover {
+    background-color: #0a3d0d;
+    color: #ffffff;
+    cursor: pointer;
+}
+
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-
 /* Document
    ========================================================================== */
-
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-
 html {
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
@@ -588,6 +586,7 @@ p {
 .Principal {
     display: grid;
     align-items: center;
+    margin: 0 5rem 0 5rem;
 }
 
 .Noticias {
@@ -1003,4 +1002,23 @@ p {
     align-content: center;
     align-items: center;
     text-align: center;
+}
+.indicacoes__tr {
+    font-size: 20px;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.indicacoes__td {
+    font-weight: bold;
+    vertical-align: middle;
+    align-items: center;
+}
+.indicacoes__td__btn {
+    border-radius: 1rem;
+    padding: 0 2rem 0 2rem;
+    text-decoration: none;
+    color: #0a3d0d;
+    font-size: 25px;
+    font-weight: bold;
 }
