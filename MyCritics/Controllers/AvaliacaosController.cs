@@ -47,10 +47,10 @@ namespace MyCritics.Controllers
         }
 
         // GET: Avaliacaos1/Create
-        public IActionResult Create()
+        public IActionResult Create(Filme filme)
         {
-            ViewData["FilmeID"] = new SelectList(_context.Filme, "ID", "ID");
-            ViewData["UsuarioID"] = new SelectList(_context.Usuario, "ID", "ID");
+            var filmenome = _context.Filme.Where(m => m.ID.Equals(filme.ID)).FirstOrDefault();
+            TempData["Filme"] = filmenome.Nome;
             return View();
         }
 
