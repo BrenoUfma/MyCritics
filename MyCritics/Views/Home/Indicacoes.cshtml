@@ -8,13 +8,12 @@
             </a>
             <a class="cabecalho__botao-nav" asp-action="Inicial" asp-controller="Home">MY CRITICS</a>
         </div>
-        <a class="cabecalho__botao-nav" asp-controller="home" asp-action="Indicacoes">
-            <p class="p"> Lista de Filmes </p>
+        <a class="cabecalho__botao-nav" asp-controller="Filmes" asp-action="Create">
+            <p class="p"> Cadastrar Filme </p>
         </a>
         <div class="">
             <p></p>
             <a asp-controller="home" asp-action="Perfil">
-                <img src="~/images/mulher-perfil.jpg" alt="some text" width=51 height=52 class="Pesquisa">
                 <p class="Titulo"> @TempData.Peek("Nome") </p>
             </a>
 

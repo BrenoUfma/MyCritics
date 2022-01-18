@@ -6,9 +6,12 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
+using Microsoft.AspNetCore.Http;
 
 namespace MyCritics.Models {
     public class Usuario {
+        public Usuario() {
+        }
 
         public int ID { get; set; }
         public string Password { get; set; }
@@ -18,25 +21,17 @@ namespace MyCritics.Models {
         public string Cidade { get; set; }
         public string Estado { get; set; }
         public DateTime DataNascimento { get; set; }
-        public string file { get; set; }
+        public byte[] file { get; set; }
 
-
-        public Usuario() {
-        }
-
-        public Usuario(int iD, string password, string nome, string sobrenome, string email, string cidade, string estado, DateTime dataNascimento, string file) {
-            ID = iD;
+        public Usuario(string password, string nome, string sobrenome, string email, string cidade, string estado, DateTime dataNascimento, byte[] file) {
             Password = password;
             Nome = nome;
             Sobrenome = sobrenome;
             Email = email;
             Cidade = cidade;
             Estado = estado;
-            DataNascimento = dataNascimento.Date;
+            DataNascimento = dataNascimento;
             this.file = file;
-            
         }
-        
-        
-        }
+    }
     }

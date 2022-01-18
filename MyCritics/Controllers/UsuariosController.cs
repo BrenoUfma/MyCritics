@@ -7,36 +7,31 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MyCritics.Data;
 using MyCritics.Models;
+using System.IO;
+using Microsoft.AspNetCore.Http;
 
-namespace MyCritics.Controllers
-{
-    public class UsuariosController : Controller
-    {
+namespace MyCritics.Controllers {
+    public class UsuariosController : Controller {
         private readonly MyCriticsContext _context;
 
-        public UsuariosController(MyCriticsContext context)
-        {
+        public UsuariosController(MyCriticsContext context) {
             _context = context;
         }
 
         // GET: Usuarios
-        public async Task<IActionResult> Index()
-        {
+        public async Task<IActionResult> Index() {
             return View(await _context.Usuario.ToListAsync());
         }
 
         // GET: Usuarios/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
+        public async Task<IActionResult> Details(int? id) {
+            if (id == null) {
                 return NotFound();
             }
 
             var usuario = await _context.Usuario
                 .FirstOrDefaultAsync(m => m.ID == id);
-            if (usuario == null)
-            {
+            if (usuario == null) {
                 return NotFound();
             }
 
@@ -44,8 +39,7 @@ namespace MyCritics.Controllers
         }
 
         // GET: Usuarios/Create
-        public IActionResult Create()
-        {
+        public IActionResult Create() {
             return View();
         }
 
@@ -54,10 +48,9 @@ namespace MyCritics.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Password,Nome,Sobrenome,Email,Cidade,Estado,DataNascimento,file")] Usuario usuario)
-        {
-            if (ModelState.IsValid)
-            {
+        public async Task<IActionResult> Create(Usuario usuario) {
+
+            if (ModelState.IsValid) {
                 _context.Add(usuario);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -66,16 +59,13 @@ namespace MyCritics.Controllers
         }
 
         // GET: Usuarios/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
+        public async Task<IActionResult> Edit(int? id) {
+            if (id == null) {
                 return NotFound();
             }
 
             var usuario = await _context.Usuario.FindAsync(id);
-            if (usuario == null)
-            {
+            if (usuario == null) {
                 return NotFound();
             }
             return View(usuario);
@@ -86,28 +76,21 @@ namespace MyCritics.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Password,Nome,Sobrenome,Email,Cidade,Estado,DataNascimento,file")] Usuario usuario)
-        {
-            if (id != usuario.ID)
-            {
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Password,Nome,Sobrenome,Email,Cidade,Estado,DataNascimento,file")] Usuario usuario) {
+            if (id != usuario.ID) {
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
+            if (ModelState.IsValid) {
+                try {
                     _context.Update(usuario);
                     await _context.SaveChangesAsync();
                 }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!UsuarioExists(usuario.ID))
-                    {
+                catch (DbUpdateConcurrencyException) {
+                    if (!UsuarioExists(usuario.ID)) {
                         return NotFound();
                     }
-                    else
-                    {
+                    else {
                         throw;
                     }
                 }
@@ -117,17 +100,14 @@ namespace MyCritics.Controllers
         }
 
         // GET: Usuarios/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
+        public async Task<IActionResult> Delete(int? id) {
+            if (id == null) {
                 return NotFound();
             }
 
             var usuario = await _context.Usuario
                 .FirstOrDefaultAsync(m => m.ID == id);
-            if (usuario == null)
-            {
+            if (usuario == null) {
                 return NotFound();
             }
 
@@ -137,16 +117,14 @@ namespace MyCritics.Controllers
         // POST: Usuarios/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
+        public async Task<IActionResult> DeleteConfirmed(int id) {
             var usuario = await _context.Usuario.FindAsync(id);
             _context.Usuario.Remove(usuario);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool UsuarioExists(int id)
-        {
+        private bool UsuarioExists(int id) {
             return _context.Usuario.Any(e => e.ID == id);
         }
     }

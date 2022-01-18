@@ -1,6 +1,6 @@
-﻿@model MyCritics.Models.Usuario
+﻿@model IEnumerable<MyCritics.Models.Avaliacao>
 <body>
-    
+
     <div class="cabecalho" id="cab_login_registrar">
         <div class="logoNome">
             <a href="">
@@ -10,6 +10,9 @@
         </div>
         <a class="cabecalho__botao-nav" asp-controller="home" asp-action="Indicacoes">
             <p class="p"> Lista de Filmes </p>
+        </a>
+        <a class="cabecalho__botao-nav" asp-controller="Filmes" asp-action="Create">
+            <p class="p"> Cadastrar Filme </p>
         </a>
         <div class="">
             <p></p>
@@ -47,27 +50,33 @@
 
             </div>
 
+
+
             <div class="mais-avaliados">
 
                 <div class="titulo_conteudo_right">
                     <p class="Titulo"> Filmes mais avaliados </p>
                 </div>
                 <p></p>
-                <div class="dot">
-                    <p class="Titulo"> Filmes mais avaliados </p>
-                </div>
-                <p></p>
-                <div class="dot">
-                    <p class="Titulo"> Filmes mais avaliados </p>
-                </div>
-                <p></p>
-                <div class="dot">
-                    <p class="Titulo"> Filmes mais avaliados </p>
-                </div>
-
+                    <table>
+                        <tbody>
+                            @foreach (var item in Model) {
+                                <tr>
+                                    <td>
+                                        <div class="dot">
+                                            <p class="avaliacoes">@Html.DisplayFor(modelItem => item.Filme.Nome) </p>
+                                            <p></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
             </div>
 
         </div>
+
     </div>
+
 
 </body>

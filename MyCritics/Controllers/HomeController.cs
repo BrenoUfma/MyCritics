@@ -37,7 +37,7 @@ namespace MyCritics.Controllers {
                 TempData["Nome"] = Sessao(usuario).Nome;
                 TempData["Sobrenome"] = Sessao(usuario).Sobrenome;
                 TempData["ID"] = Sessao(usuario).ID;
-                return View("Inicial", Sessao(usuario));
+                return View("Inicial", _context.Avaliacao.Include(a => a.Filme));
             }
             else {
 
@@ -46,9 +46,6 @@ namespace MyCritics.Controllers {
 
         }
 
-        public IActionResult Index() {
-            return View();
-        }
         public IActionResult Pesquisa() {
             return View();
         }
@@ -65,12 +62,12 @@ namespace MyCritics.Controllers {
         }
 
         public IActionResult Inicial() {
-            return View();
+             ;
+            return View(_context.Avaliacao.Include(a => a.Filme));
         }
 
 
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+            [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error() {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }

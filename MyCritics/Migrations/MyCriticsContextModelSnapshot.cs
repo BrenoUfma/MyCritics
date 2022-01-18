@@ -172,7 +172,7 @@ namespace MyCritics.Migrations
 
                     b.Property<string>("Sobrenome");
 
-                    b.Property<string>("file");
+                    b.Property<byte[]>("file");
 
                     b.HasKey("ID");
 

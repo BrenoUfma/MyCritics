@@ -10,13 +10,16 @@
         </a>
 
         <a class="cabecalho__botao-nav" asp-action="Login" asp-controller="Home">MY CRITICS</a>
+
     </div>
+    
     <nav class="cabecalho__navegacao">
         <ul class="cabecalho__navegacao-botoes">
-            <a class="cabecalho__botao-nav" asp-action="Index" asp-controller="Filmes">Retornar a lista</a>
+            <a class="cabecalho__botao-nav" asp-action="Indicacoes" asp-controller="Home">Ir para Lista de Filmes</a>
         </ul>
 
     </nav>
+
 </header>
 <h2 class="formulario__titulo">Adicionar Filmes</h2>
 
@@ -37,11 +40,11 @@
             </div>
             <div class="form-group">
                 <label asp-for="Ano" class="control-label"></label>
-                <input asp-for="Ano" class="form-control" />
+                <input asp-for="Ano" type="date" class="form-control" />
                 <span asp-validation-for="Ano" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Salvar" class="btn btn-success" />
             </div>
         </form>
     </div>

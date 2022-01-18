@@ -11,10 +11,11 @@
         <ul class="cabecalho__navegacao-botoes">
             <a class="cabecalho__botao-nav" asp-action="Indicacoes" asp-controller="Home">Retornar a lista</a>
         </ul>
-
     </nav>
 </header>
-<h4 class="formulario__titulo">Avaliacao Para @TempData.Peek("Filme")</h4>
+<h3 class="formulario__titulo">Avaliação</h3>
+<h3 class="formulario__titulo">@TempData.Peek("Filme")</h3>
+<h4 class="formulario__corpo">Descrição: @TempData.Peek("FilmeDescricao")</h4>
 <hr />
 <div class="row formulario__corpo">
     <div class="col-md-4">
@@ -24,7 +25,7 @@
                 <input asp-for="UsuarioID" class="form-control" value="@TempData.Peek("ID")"></input>
             </div>
             <div class="form-group" hidden="hidden">
-                <input asp-for="FilmeID" class="form-control" value="@ViewBag.ID"></input>
+                <input asp-for="FilmeID" class="form-control" value="@TempData.Peek("FilmeID")"></input>
             </div>
             <div class="form-group">
                 <label asp-for="NotaFilme" class="control-label">Nota Filme</label>
@@ -56,7 +57,7 @@
                 <textarea asp-for="Comentario" class="form-control"></textarea>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Salvar" class="btn btn-success"/>
             </div>
         </form>
     </div>
