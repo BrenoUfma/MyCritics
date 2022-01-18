@@ -10,8 +10,8 @@ using MyCritics.Data;
 namespace MyCritics.Migrations
 {
     [DbContext(typeof(MyCriticsContext))]
-    [Migration("20220117142819_avliacao")]
-    partial class avliacao
+    [Migration("20220117235531_Avaliacao")]
+    partial class Avaliacao
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -46,13 +46,15 @@ namespace MyCritics.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("FilmeID");
+                    b.Property<string>("Comentario");
 
-                    b.Property<int>("NotaAtor");
+                    b.Property<int>("FilmeID");
 
                     b.Property<int>("NotaDiretor");
 
                     b.Property<int>("NotaFigurino");
+
+                    b.Property<int>("NotaFilme");
 
                     b.Property<int>("NotaRoteiro");
 

@@ -2,7 +2,7 @@
 
 namespace MyCritics.Migrations
 {
-    public partial class avaliacao2 : Migration
+    public partial class Avaliacao : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

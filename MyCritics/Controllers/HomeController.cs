@@ -55,12 +55,12 @@ namespace MyCritics.Controllers {
         public IActionResult Avaliacao() {
             return View();
         }
-        public IActionResult Perfil() {
-
-            return View();
+        public async Task<IActionResult> Perfil() {
+            var myCriticsContext = _context.Avaliacao.Include(a => a.Filme).Include(a => a.Usuario).Where(m=>m.UsuarioID.Equals(TempData.Peek("ID")));
+            return View(await myCriticsContext.ToListAsync());
         }
 
-        public async Task<IActionResult> Indicacoes() {
+            public async Task<IActionResult> Indicacoes() {
             return View(await _context.Filme.ToListAsync());
         }
 

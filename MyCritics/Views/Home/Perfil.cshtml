@@ -1,4 +1,4 @@
-﻿@model MyCritics.Models.Usuario
+﻿@model IEnumerable<MyCritics.Models.Avaliacao>
 <body>
     <div class="cabecalho" id="cab_login_registrar">
         <div class="logoNome">
@@ -35,36 +35,65 @@
                 <p>Assistidos Recentemente</p>
             </div>
             <div class="assistidos back-filmes-assistidos">
-                <div class="filmes-assistidos">
-                    <p></p>
-                    <img src="~/images/Corra.jpeg" alt="some text" width=202 height=292>
-                    <p>GET OUT </p>
-                    <p></p>
-                </div>
-                <div class="filmes-assistidos">
-                    <p></p>
-                    <img src="~/images/US.jpg" alt="some text" width=202 height=292>
-                    <p>US </p>
-                    <p></p>
-                </div>
-                <div class="filmes-assistidos">
-                    <p></p>
-                    <img src="~/images/Candyman.jpg" alt="some text" width=202 height=292>
-                    <p>Candyman </p>
-                    <p></p>
-                </div>
-                <div class="filmes-assistidos">
-                    <p></p>
-                    <img src="~/images/avengers-infinity-war-official-poster-2018-4o.jpg" alt="some text" width=202 height=292>
-                    <p>Infinity War</p>
-                    <p></p>
-                </div>
-                <div class="filmes-assistidos">
-                    <p></p>
-                    <img src="~/images/Spider-Man_No_Way_Home_poster.jpg" alt="some text" width=202 height=292>
-                    <p>No Way Home </p>
-                    <p></p>
-                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Filme)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.NotaFilme)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.NotaDiretor)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.NotaFigurino)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.NotaRoteiro)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.NotaSonoplastia)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Comentario)
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model) {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Filme.Nome)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NotaFilme)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NotaDiretor)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NotaFigurino)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NotaRoteiro)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NotaSonoplastia)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Comentario)
+                                </td>
+                                <td>
+                                    <a asp-controller="Avaliacaos" asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+                                    <a asp-controller="Avaliacaos" asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
